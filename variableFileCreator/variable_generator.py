@@ -31,6 +31,16 @@ def format_vsf_mac(mac: str) -> str:
     clean = normalize_mac(mac)
     return f"{clean[:6]}-{clean[6:]}"
 
+def generate_snmpv3_engineid(mac: str) -> str:
+    """Create SNMPv3 engine ID using the device LAN MAC."""
+    clean = normalize_mac(mac)
+
+    mac_octets = ":".join(
+        clean[i:i + 2] for i in range(0, 12, 2)
+    )
+
+    return f"00:00:00:0b:00:00:{mac_octets}"
+
 
 def validate_inputs() -> None:
     if STACK_SIZE not in (1, 2, 3, 4):
@@ -108,6 +118,7 @@ def create_variable_file() -> dict:
     variables["_sys_ip_address"] = IP_ADDRESS
     variables["_sys_lan_mac"] = LAN_MAC
     variables["_sys_serial"] = SERIAL
+    variables["_sys_snmpv3_engineid"] = generate_snmpv3_engineid(LAN_MAC)
     variables["_sys_stack_command"] = generate_stack_command()
 
     return {SERIAL: variables}

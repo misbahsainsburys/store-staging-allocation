@@ -1,0 +1,18 @@
+{
+  "CN01K91023": {
+    "_sys_gateway": "10.190.129.241",
+    "_sys_hostname": "JS4545-M1-ST1",
+    "_sys_ip_address": "10.190.129.253",
+    "_sys_lan_mac": "88:3a:30:cf:03:c0",
+    "_sys_module_command": "",
+    "_sys_netmask": "255.255.255.128",
+    "_sys_oobm_command": "oobm\n   ip address dhcp-bootp\n   member 1\n      ip address dhcp-bootp\n      exit\n   member 2\n      ip address dhcp-bootp\n      exit\n   exit\n",
+    "_sys_serial": "CN01K91023",
+    "_sys_snmpv3_engineid": "00:00:00:0b:00:00:88:3a:30:cf:03:c0",
+    "_sys_stack_command": "vsf\n   enable domain 1\n   member 1\n      type \"JL558A\" mac-address 883a30-cf03c0\n      priority 250\n      link 1 1/49-1/50\n      link 1 name \"I-Link1_1\"\n      link 2 name \"I-Link1_2\"\n      exit\n   member 2\n      type \"JL558A\" mac-address 883a30-cf03c2\n      priority 200\n      link 1 2/49-2/50\n      link 1 name \"I-Link2_1\"\n      link 2 name \"I-Link2_2\"\n      exit\n   port-speed 10g\n   exit\n",
+    "_sys_template_header": "; hpStack_WC Configuration Editor; Created on release #WC.16.11.0016\n; Ver #14:67.6f.f8.1d.9b.3f.bf.bb.ef.7c.59.fc.6b.fb.9f.fc.ff.ff.37.ef:44\n",
+    "_sys_use_dhcp": "0",
+    "_sys_vlan_1_tag_command": "1/19,2/19,Trk1-Trk5,Trk7,Trk10-Trk12",
+    "_sys_vlan_1_untag_command": "1/3-1/4,1/7-1/12,1/14-1/16,1/18,1/21,1/23,2/3-2/4,2/7-2/15,2/21,2/23"
+  }
+}
